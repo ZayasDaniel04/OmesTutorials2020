@@ -3,7 +3,7 @@ import numpy as np
 import imutils
 
 #cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
-cap = cv2.VideoCapture('videoEntrada.mp4')
+cap = cv2.VideoCapture(0)
 bg = None
 
 # COLORES PARA VISUALIZACIÓN
@@ -79,7 +79,7 @@ while True:
 
 				for i in range(defects.shape[0]):
 		
-					s,e,f,d = defects[i,0]
+					s,e,f,d = defects[i].flatten()
 					start = cnt[s][0]
 					end = cnt[e][0]
 					far = cnt[f][0]
